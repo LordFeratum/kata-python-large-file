@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  kata:
+    build: .
+    command: python kata/main.py
+    volumes:
+      - .:/opt
+    environment:
+      - AMAZONS3_URL=https://s3.amazonaws.com/carto-1000x/data/yellow_tripdata_2016-01.csv
